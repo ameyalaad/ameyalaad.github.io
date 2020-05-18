@@ -1,1 +1,0 @@
-# ameyalaad.github.io
