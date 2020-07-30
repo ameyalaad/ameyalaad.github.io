@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.loader {
-  border: 6px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 6px solid #606060;
-  width: 50px;
-  height: 50px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
-   margin: 5px auto;
-}
-h2{
-   margin: 5px auto;
-}
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<style>
+			.loader {
+				border: 6px solid #f3f3f3;
+				border-radius: 50%;
+				border-top: 6px solid #606060;
+				width: 50px;
+				height: 50px;
+				-webkit-animation: spin 2s linear infinite; /* Safari */
+				animation: spin 2s linear infinite;
+				margin: 5px auto;
+			}
 
-/* Safari */
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
+			body.center {
+				margin: 0;
+				padding: 0;
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: Arial, Helvetica, sans-serif;
+				font-variant: small-caps;
+			}
+			body.center > div {
+				margin: 0;
+			}
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-</style>
-  <meta http-equiv="refresh" content="0; url=https://ameyalaad.github.io/react-portfolio/" />
-</head>
-<body>
+			/* Safari */
+			@-webkit-keyframes spin {
+				0% {
+					-webkit-transform: rotate(0deg);
+				}
+				100% {
+					-webkit-transform: rotate(360deg);
+				}
+			}
 
-<h2>Redirecting</h2>
+			@keyframes spin {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
 
-<div class="loader"></div>
-
-</body>
+		<meta http-equiv="refresh" content="0; url=https://ameyalaad.github.io/react-portfolio/" />
+	</head>
+	<body class="center">
+		<div>
+			<h2>Redirecting</h2>
+			<div class="loader"></div>
+		</div>
+	</body>
 </html>
