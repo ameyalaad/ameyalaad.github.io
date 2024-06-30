@@ -18,71 +18,37 @@
 				margin: 0;
 			}
 
+			/* HTML: <div class="loader"></div> */
 			.loader {
-				position: relative;
-				margin: 0 auto;
-				width: 70px;
+			  width: 90px;
+			  height: 14px;
+			  background: 
+			    radial-gradient(circle 7px at bottom,#fff 92%,#0000 ) calc(100%/2) 0,
+			    radial-gradient(circle 7px at top   ,#fff 92%,#0000 ) calc(100%/2) 100%,
+			    conic-gradient(from 135deg at top   ,#fff 90deg,#0000 0) 0 0,
+			    conic-gradient(from -45deg at bottom,#fff 90deg,#0000 0) 0 100%;
+			  background-size: calc(100%/2) 50%;
+			  background-repeat: repeat-x;
+			  animation: l13 3s infinite;
 			}
-
-			.loader:before {
-				content: "";
-				display: block;
-				padding-top: 100%;
-			}
-
-			.circular {
-				animation: rotate 2s linear infinite;
-				height: 100%;
-				transform-origin: center center;
-				width: 100%;
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				margin: auto;
-			}
-
-			.path {
-				stroke-dasharray: 1, 200;
-				stroke-dashoffset: 0;
-				stroke: #540094;
-				animation: dash 1.5s ease-in-out infinite, 6s ease-in-out infinite;
-				stroke-linecap: round;
-			}
-
-			@keyframes rotate {
-				100% {
-					transform: rotate(360deg);
-				}
-			}
-
-			@keyframes dash {
-				0% {
-					stroke-dasharray: 1, 200;
-					stroke-dashoffset: 0;
-				}
-				50% {
-					stroke-dasharray: 89, 200;
-					stroke-dashoffset: -35px;
-				}
-				100% {
-					stroke-dasharray: 89, 200;
-					stroke-dashoffset: -124px;
-				}
+			@keyframes l13 {
+			    0%  {background-position: calc(100%/2) 0,calc(100%/2) 100%,0 0, 0 100%}
+			    20%,
+			    30% {background-position: calc(3*100%/4) 0,calc(100%/4) 100%,calc(100%/4) 0, calc(100%/-4) 100%}
+			    45%,
+			    55% {background-position: 100% 0,0 100%,calc(100%/2) 0, calc(100%/-2) 100%}
+			    70%,
+			    80% {background-position: calc(5*100%/4) 0,calc(100%/-4) 100%,calc(3*100%/4) 0, calc(3*100%/-4) 100%}
+			    100%{background-position: calc(3*100%/2) 0,calc(100%/-2) 100%,100% 0, -100% 100%}
 			}
 		</style>
 
-		<meta http-equiv="refresh" content="0; url=https://ameyalaad.github.io/portfolio_v2/" />
+		<meta http-equiv="refresh" content="0; url=https://ameyalaad.github.io/portfolio_v4/" />
 	</head>
 	<body class="center">
 		<div>
+			<div class="loader"></div>
 			<h2>Redirecting</h2>
-			<div class="loader">
-				<svg class="circular" viewBox="25 25 50 50">
-					<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
-				</svg>
-			</div>
 		</div>
 	</body>
 </html>
